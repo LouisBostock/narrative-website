@@ -96,8 +96,8 @@ MY HEX CODES:
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
-  font-size: var(--bs-body-font-size);
-  font-weight: var(--bs-body-font-weight);
+  font-size: 1.25rem;
+  font-weight: 300;
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
@@ -118,11 +118,23 @@ hr:not([size]) {
   height: 1px;
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+h6, .h6, h5, .h5, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
+}
+
+/*
+Changing h4
+*/
+
+h4, .h4 {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+
 }
 
 h1, .h1 {
@@ -157,7 +169,7 @@ h4, .h4 {
 }
 @media (min-width: 1200px) {
   h4, .h4 {
-    font-size: 1.5rem;
+    font-size: 50px;
   }
 }
 
@@ -4582,6 +4594,7 @@ textarea.form-control-lg {
 .navbar-light .navbar-nav .show > .nav-link,
 .navbar-light .navbar-nav .nav-link.active {
   color: rgba(0, 0, 0, 0.9);
+  border-bottom:0.25rem solid #a50044
 }
 .navbar-light .navbar-toggler {
   color: rgba(0, 0, 0, 0.55);
@@ -7951,7 +7964,7 @@ Bootstrap Original Font
 
 .text-black {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
+  color: #212529, var(--bs-text-opacity) !important;
 }
 
 .text-white {
@@ -7966,12 +7979,12 @@ Bootstrap Original Font
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #6c757d !important;
+  color: #a50044 !important;
 }
 
 .text-black-50 {
   --bs-text-opacity: 1;
-  color: rgba(0, 0, 0, 0.5) !important;
+  color: #212529 !important;
 }
 
 .text-white-50 {
@@ -11501,8 +11514,8 @@ body {
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #64a19d;
-  border: 1px solid #64a19d;
+  color: #a50044;
+  border: 1px solid #a50044;
 }
 #mainNav .navbar-toggler:focus {
   outline: none;
@@ -11535,14 +11548,14 @@ body {
   }
   #mainNav .nav-link {
     transition: none;
-    padding: 2rem 1.5rem;
+    padding: 1.4rem 1.5rem;
     color: #fff;
   }
   #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: #a50044;
   }
   #mainNav .nav-link:active {
-    color: #ffed02;
+    color: #a50044;
   }
   #mainNav.navbar-shrink {
     background-color: #fff;
@@ -11556,15 +11569,15 @@ body {
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
+    color: #a50044;
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #467370;
+    color: #a50044;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
+    color: #a50044;
     outline: none;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: 0.25rem solid #a50044;
   }
 }
 
@@ -11743,7 +11756,7 @@ header .overlay {
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
+    border-left: 0.5rem solid #a50044;
   }
 }
 .projects-section .project-text {
@@ -11820,3 +11833,32 @@ header .overlay {
 .footer {
   padding: 5rem 0;
 }
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+@media (min-width: 40em) {
+    .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+/* Featurettes End
+------------------------- */
